@@ -46,12 +46,13 @@ CUSTOM_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'captcha',
     "jazzmin",
     "django_filters",
     "rest_framework",
     'rest_framework.authtoken',
     "drf_yasg",
-    'captcha',
+
 
 ]
 
@@ -162,11 +163,14 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 10
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5
 }
 
 
 
 RECAPTCHA_PRIVATE_KEY = env.str("RECAPTCHA_PRIVATE_KEY")
 RECAPTCHA_PUBLIC_KEY = env.str("RECAPTCHA_PUBLIC_KEY")
+#
+# RECAPTCHA_PRIVATE_KEY = "6LdBRVUmAAAAAORp0SoZU5bJZM_zAKJYHC3F4EN1"
+# RECAPTCHA_PUBLIC_KEY = "6LdBRVUmAAAAAPjMgcg4dBSI16xGGVZEb5aPcjuV"

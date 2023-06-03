@@ -1,8 +1,0 @@
-GET  http://127.0.0.1:8000/sponsors/sponsor/2
-Authorization: Token a8a8bfd294d532107af497afebe683700080d671
-
-
-###
-
-DELETE   http://127.0.0.1:8000/sponsors/sponsor/2
-Authorization: Token a8a8bfd294d532107af497afebe683700080d671
